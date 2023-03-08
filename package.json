@@ -1,0 +1,23 @@
+{
+  "name": "pern",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": [
+    "Prisma",
+    "Express JS",
+    "React JS",
+    "Node JS"
+  ],
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail \"wsrun --parallel dev\"",
+    "start": "concurrently --kill-others-on-fail \"wsrun --parallel start\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "wsrun": "^5.2.4"
+  }
+}

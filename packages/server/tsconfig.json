@@ -1,0 +1,27 @@
+{
+   "extends": "../../tsconfig.json",
+   "compilerOptions": {
+      "baseUrl": "./",
+      "esModuleInterop": true,
+      "lib": [
+         "ESNext"
+      ],
+      "module": "CommonJS",
+      "paths": {
+         "@/*": ["src/*"],
+         "@config/*": ["src/config/*"],
+         "@controllers/*": ["src/controllers/*"],
+         "@middlewares/*": ["src/middlewares/*"],
+         "@routers/*": ["src/routers/*"]
+      },
+      "typeRoots": [
+         "src/types",
+         "node_modules/@types"
+      ]
+   },
+   "include": [
+      "src",
+      "prisma"
+   ],
+}
+

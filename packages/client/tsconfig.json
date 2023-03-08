@@ -1,0 +1,38 @@
+{
+   "extends": "../../tsconfig.json",
+   "compilerOptions": {
+      "baseUrl": "./",
+      "esModuleInterop": false,
+      "isolatedModules": true,
+      "jsx": "react-jsx",
+      "lib": [
+         "DOM",
+         "DOM.Iterable",
+         "ESNext"
+      ],
+      "module": "ESNext",
+      "paths": {
+         "@/*": ["src/*"],
+         "@apis/*": ["src/features/apis/*"],
+         "@stores/*": ["src/features/stores/*"],
+         "@components/*": ["src/components/*"],
+         "@config/*": ["src/config/*"],
+         "@middlewares/*": ["src/middlewares/*"],
+         "@pages/*": ["src/pages/*"]
+      },
+      "typeRoots": [
+         "src/types",
+         "node_modules/@types"
+      ],
+      "types": [
+         "node"
+      ],
+      "useDefineForClassFields": true
+   },
+   "include": [
+      "src"
+   ],
+   "references": [{
+      "path": "./tsconfig.node.json"
+   }]
+}
