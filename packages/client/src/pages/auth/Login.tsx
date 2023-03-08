@@ -46,7 +46,7 @@ const Login = () => {
          toast(
             <p className="text-white text-center font-bold text-sm tracking-wide select-none">Log in failed!</p>
          , {
-            toastId: "login-failed",
+            toastId: "log-in-failed",
             containerId: "toast-container",
             className: "rounded !bg-red-500",
             progressClassName: "bg-white",
@@ -61,7 +61,7 @@ const Login = () => {
       toast(
          <p className="text-white text-center font-bold text-sm tracking-wide select-none">Log in successful!</p>
       , {
-         toastId: "login-success",
+         toastId: "log-in-success",
          containerId: "toast-container",
          className: "rounded !bg-green-500",
          progressClassName: "bg-white",

@@ -5,19 +5,19 @@ import { store } from "@config/prisma"
 config()
 
 const cookieOptions: CookieOptions = {
+   httpOnly: true,
    maxAge: 24 * 60 * 60 * 1000,
    secure: process.env.NODE_ENV === "production",
-   sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-   httpOnly: true
+   sameSite: process.env.NODE_ENV === "production" ? "none" : "lax"
 }
 
 const sessionOptions: SessionOptions = {
-   secret: process.env.SESSION_SECRET_KEY.split(" "),
+   cookie: cookieOptions,
    resave: true,
-   saveUninitialized: false,
    rolling: true,
-   store: store,
-   cookie: cookieOptions
+   saveUninitialized: false,
+   secret: process.env.SESSION_SECRET_KEY.split(" "),
+   store: store
 }
 
 export const sessionMiddleware = session(sessionOptions)
