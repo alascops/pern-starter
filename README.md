@@ -1,6 +1,6 @@
 # Alascode PERN App
 
-A monorepo application starter template using Prisma, Express JS, React JS, and Node JS.
+A monorepo application starter template using Prisma, Express JS, React JS, Node JS, and Typescript.
 
 ## Installation and Setup
 
